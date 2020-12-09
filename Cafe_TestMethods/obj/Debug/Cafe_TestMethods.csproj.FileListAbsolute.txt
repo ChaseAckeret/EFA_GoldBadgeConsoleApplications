@@ -1,0 +1,2 @@
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe_TestMethods\obj\Debug\Cafe_TestMethods.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe_TestMethods\obj\Debug\Cafe_TestMethods.csproj.CoreCompileInputs.cache

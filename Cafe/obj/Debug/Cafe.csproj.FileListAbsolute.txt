@@ -5,3 +5,10 @@ C:\Users\chase.ackeret\source\repos\GoldBadgeConsoleApplications\Cafe\obj\Debug\
 C:\Users\chase.ackeret\source\repos\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
 C:\Users\chase.ackeret\source\repos\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.exe
 C:\Users\chase.ackeret\source\repos\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.pdb
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.exe
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.pdb
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.exe.config
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.exe
+C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.pdb

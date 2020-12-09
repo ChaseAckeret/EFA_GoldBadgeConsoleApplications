@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe", "Cafe\Cafe.csproj", "{47BDB827-670A-46C5-ACFD-771698F55A42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Claims", "Claims\Claims.csproj", "{1C402F0D-A51E-44D2-B96A-608756F17441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe_TestMethods", "Cafe_TestMethods\Cafe_TestMethods.csproj", "{01A132BA-5473-4C04-896F-9BE27E1767A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{47BDB827-670A-46C5-ACFD-771698F55A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47BDB827-670A-46C5-ACFD-771698F55A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47BDB827-670A-46C5-ACFD-771698F55A42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C402F0D-A51E-44D2-B96A-608756F17441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C402F0D-A51E-44D2-B96A-608756F17441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C402F0D-A51E-44D2-B96A-608756F17441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C402F0D-A51E-44D2-B96A-608756F17441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01A132BA-5473-4C04-896F-9BE27E1767A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A132BA-5473-4C04-896F-9BE27E1767A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A132BA-5473-4C04-896F-9BE27E1767A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A132BA-5473-4C04-896F-9BE27E1767A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
