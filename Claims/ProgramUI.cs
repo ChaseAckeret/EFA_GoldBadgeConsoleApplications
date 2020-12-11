@@ -144,28 +144,24 @@ namespace Claims
 
         private void SeedList()
         {
-            DateTime dateOfIncidient1 = new DateTime(2018, 4, 25);
-            DateTime dateOfClaim1 = new DateTime(2018,4,27);
+            DateTime dateOfIncidient = new DateTime(2018, 4, 25);
+            DateTime dateOfClaim = new DateTime(2018,4,27);
            
-            Claim one = new Claim(1, ClaimType.Car, "Car accident on 465.", 400.00m, dateOfIncidient1 , dateOfClaim1, true);
+            Claim one = new Claim(1, ClaimType.Car, "Car accident on 465.", 400.00m, dateOfIncidient , dateOfClaim, true);
 
-            DateTime dateOfIncidient2 = new DateTime(2018,4,11);
-            DateTime dateOfClaim2 = new DateTime(2018,4,12);
+            dateOfIncidient = new DateTime(2018,4,11);
+            dateOfClaim = new DateTime(2018,4,12);
 
-            Claim two = new Claim(2, ClaimType.Home, "House fire in kitchen.", 4000.00m, dateOfIncidient2, dateOfClaim2, true );
+            Claim two = new Claim(2, ClaimType.Home, "House fire in kitchen.", 4000.00m, dateOfIncidient, dateOfClaim, true );
 
-            DateTime dateOfIncidient3 = new DateTime(2018,4,27);
-            DateTime dateOfClaim3 = new DateTime(2018,6,1);
+            dateOfIncidient = new DateTime(2018,4,27);
+            dateOfClaim = new DateTime(2018,6,1);
 
-            Claim three = new Claim(3, ClaimType.Theft, "Stolen Pancakes.", 4.00m, dateOfIncidient3, dateOfClaim3, false);
-
-            Claim four = new Claim(4, ClaimType.Car, "Fender Bender", 10000, new DateTime(2020, 12, 10), new DateTime(2020, 12, 30), true);
-
+            Claim three = new Claim(3, ClaimType.Theft, "Stolen Pancakes.", 4.00m, dateOfIncidient, dateOfClaim, false);
 
             _claimsRepo.AddClaim(one);
             _claimsRepo.AddClaim(two);
             _claimsRepo.AddClaim(three);
-            _claimsRepo.AddClaim(four);
         }
     }
 }
