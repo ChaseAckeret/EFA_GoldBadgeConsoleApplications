@@ -31,7 +31,7 @@ namespace Claims
             Description = description;
             ClaimAmount = claimAmount;
             DateOfIncident = dateOfIncident;
-            DateOfClaim = dateOfIncident;
+            DateOfClaim = dateOfClaim;
             IsValid = isValid;
         }
     }

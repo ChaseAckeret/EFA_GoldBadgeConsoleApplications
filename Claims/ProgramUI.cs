@@ -12,6 +12,7 @@ namespace Claims
 
         public void Run()
         {
+            SeedList();
             Menu();
         }
 
@@ -47,7 +48,7 @@ namespace Claims
                         Console.WriteLine("Please enter a valid number");
                         break;
                 }
-                Console.WriteLine("Please press any key to continue.");
+                Console.WriteLine("\nPlease press any key to continue.");
                 Console.ReadKey();
                 Console.Clear();
             }
@@ -58,24 +59,31 @@ namespace Claims
             Console.Clear();
             Queue<Claim> queueOfClaims = _claimsRepo.ViewClaimList();
 
+            Console.WriteLine($"{"ClaimID",-10} {"Type",-9} {"Description",-25} {"Amount",-10} {"DateOfIncident",-19} {"DateOfClaim",-12} {"IsValid",-10}");
+
             foreach(Claim claim in queueOfClaims)
             {
-                Console.WriteLine($"{claim.ClaimID} , {claim.TypeOfClaim}," +
-                    $"{claim.Description},{claim.ClaimAmount},{claim.DateOfIncident.ToShortDateString()}," +
-                    $"{claim.DateOfClaim.ToShortDateString()},{claim.IsValid}");
+                Console.WriteLine($"{claim.ClaimID,-10} {claim.TypeOfClaim,-10}" +
+                    $"{claim.Description,-25} {"$"+claim.ClaimAmount,-10} {claim.DateOfIncident.ToShortDateString(),-20}" +
+                    $"{claim.DateOfClaim.ToShortDateString(),-12} {claim.IsValid,-10}");
             }
         }
 
         private void TakeCareOfClaim()
         {
+            Console.Clear();
+
             Queue<Claim> queueClaims = _claimsRepo.ViewClaimList();
             Claim currentClaim = queueClaims.Peek();
 
-            Console.WriteLine($"Here are the details for the next claim to be handled:\n" +
-              $"{currentClaim.ClaimID}, {currentClaim.TypeOfClaim}, {currentClaim.Description}," +
-              $"{currentClaim.ClaimAmount}, {currentClaim.DateOfIncident}, {currentClaim.DateOfClaim}," +
-              $"{currentClaim.IsValid}");
-
+            Console.WriteLine("Here are the details for the next claim to be handled:\n\n");
+            Console.WriteLine($"ID:\t\t\t{ currentClaim.ClaimID}\n");
+            Console.WriteLine($"Type:\t\t\t{ currentClaim.TypeOfClaim}\n");
+            Console.WriteLine($"Description:\t\t{ currentClaim.Description}\n");
+            Console.WriteLine($"Amount:\t\t\t{"$"+currentClaim.ClaimAmount}\n");
+            Console.WriteLine($"Date Of Incident:\t{ currentClaim.DateOfIncident}\n");
+            Console.WriteLine($"Date Of Claim:\t\t{ currentClaim.DateOfClaim}\n");
+            Console.WriteLine($"Is Valid:\t\t{ currentClaim.IsValid}\n");
             Console.WriteLine("\n\nDo you want to deal with this claim now? (y/n)");
             string input = Console.ReadLine().ToLower();
 
@@ -85,6 +93,7 @@ namespace Claims
             }
             else
             {
+                Console.Clear();
                 Menu();
             }
         }
@@ -131,6 +140,32 @@ namespace Claims
             }
 
             _claimsRepo.AddClaim(claim);
+        }
+
+        private void SeedList()
+        {
+            DateTime dateOfIncidient1 = new DateTime(2018, 4, 25);
+            DateTime dateOfClaim1 = new DateTime(2018,4,27);
+           
+            Claim one = new Claim(1, ClaimType.Car, "Car accident on 465.", 400.00m, dateOfIncidient1 , dateOfClaim1, true);
+
+            DateTime dateOfIncidient2 = new DateTime(2018,4,11);
+            DateTime dateOfClaim2 = new DateTime(2018,4,12);
+
+            Claim two = new Claim(2, ClaimType.Home, "House fire in kitchen.", 4000.00m, dateOfIncidient2, dateOfClaim2, true );
+
+            DateTime dateOfIncidient3 = new DateTime(2018,4,27);
+            DateTime dateOfClaim3 = new DateTime(2018,6,1);
+
+            Claim three = new Claim(3, ClaimType.Theft, "Stolen Pancakes.", 4.00m, dateOfIncidient3, dateOfClaim3, false);
+
+            Claim four = new Claim(4, ClaimType.Car, "Fender Bender", 10000, new DateTime(2020, 12, 10), new DateTime(2020, 12, 30), true);
+
+
+            _claimsRepo.AddClaim(one);
+            _claimsRepo.AddClaim(two);
+            _claimsRepo.AddClaim(three);
+            _claimsRepo.AddClaim(four);
         }
     }
 }
