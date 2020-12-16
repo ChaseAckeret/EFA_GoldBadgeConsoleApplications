@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Claims
 {
-    class ClaimsRepo
+    public class ClaimsRepo
     {
         private Queue<Claim> _claims = new Queue<Claim>();
 

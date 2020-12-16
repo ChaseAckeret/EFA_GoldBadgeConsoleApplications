@@ -78,10 +78,10 @@ namespace Badges
                 {
                     keepAddingDoors = false;
                     Console.Clear();
-                    Menu();
                 }
             }
             _badgesRepo.AddToAccessList(badge);
+            Menu();
         }
 
         private void EditBadgeMenu()
@@ -136,15 +136,18 @@ namespace Badges
             if (wasDeleted)
             {
                 Console.WriteLine("Door was removed");
-                Console.ReadKey();
-                Menu();
+                
+
             }
             else
             {
                 Console.WriteLine("Door was not removed");
-                Console.ReadKey();
-                Menu();
+                
+
             }
+            Console.ReadKey();
+            Menu();
+           
         }
 
         private void AddDoor()
