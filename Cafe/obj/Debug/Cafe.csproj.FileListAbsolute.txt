@@ -12,3 +12,10 @@ C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debu
 C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.exe.config
 C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.exe
 C:\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.pdb
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.exe.config
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.exe
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\bin\Debug\Cafe.pdb
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.csprojAssemblyReference.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.csproj.CoreCompileInputs.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.exe
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Cafe\obj\Debug\Cafe.pdb

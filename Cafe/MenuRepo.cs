@@ -8,23 +8,23 @@ namespace Cafe
 {
     public class MenuRepo
     {
-        private List<Menu> _menu = new List<Menu>();
+        private List<MenuClass> _menu = new List<MenuClass>();
 
         //Create
-        public void AddToMenu(Menu item)
+        public void AddToMenu(MenuClass item)
         {
             _menu.Add(item);
         }
         //Read
-        public List<Menu> GetMenuList()
+        public List<MenuClass> GetMenuList()
         {
             return _menu;
         }
         //Update
-        public bool UpdateMenuItem(int item, Menu newItem)
+        public bool UpdateMenuItem(int item, MenuClass newItem)
         {
             //Find the item
-            Menu oldItem = GetItemByID(item);
+            MenuClass oldItem = GetItemByID(item);
 
             //Update item
             if (oldItem != null)
@@ -44,7 +44,7 @@ namespace Cafe
         //Delete
         public bool RemoveMenuItem(int id)
         {
-            Menu item = GetItemByID(id);
+            MenuClass item = GetItemByID(id);
 
             if (item == null)
             {
@@ -64,9 +64,9 @@ namespace Cafe
             }
         }
         //Helper Method
-        public Menu GetItemByID(int id)
+        public MenuClass GetItemByID(int id)
         {
-            foreach (Menu item in _menu)
+            foreach (MenuClass item in _menu)
             {
                 if (item.ID == id)
                 {

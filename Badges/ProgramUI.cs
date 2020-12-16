@@ -149,7 +149,36 @@ namespace Badges
 
         private void AddDoor()
         {
+            Console.Clear();
+            ViewBadges();
+            Console.WriteLine("What is the badge ID that needs updated?");
+            int id = Int16.Parse(Console.ReadLine());
 
+            var badge = _badgesRepo.GetBadgeById(id);
+
+            string masterList = "";
+            foreach (var door in badge.Doors)
+            {
+                masterList += $"{door,-5}";   //Fix comma?
+            }
+
+            Console.WriteLine("Badge {0} has access to doors {1}\n\n", id, masterList);
+            Console.WriteLine("What door would you like to add?\n\n");
+            string newDoor = Console.ReadLine();
+
+            bool wasAdded = _badgesRepo.AddDoor(id, newDoor);
+            if (wasAdded)
+            {
+                Console.WriteLine("Door was added");
+                Console.ReadKey();
+                Menu();
+            }
+            else
+            {
+                Console.WriteLine("Door was not added");
+                Console.ReadKey();
+                Menu();
+            }
         }
 
         private void ViewBadges()

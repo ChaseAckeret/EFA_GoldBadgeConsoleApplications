@@ -63,7 +63,7 @@ namespace Cafe
         private void AddNewItem()
         {
             Console.Clear();
-            Menu item = new Menu();
+            MenuClass item = new MenuClass();
 
             Console.WriteLine("Enter ID number.");
             item.ID = Int16.Parse(Console.ReadLine());
@@ -85,9 +85,9 @@ namespace Cafe
         private void ViewMenu()
         {
             Console.Clear();
-            List<Menu> listOfMenu = _menuRepo.GetMenuList();
+            List<MenuClass> listOfMenu = _menuRepo.GetMenuList();
 
-            foreach (Menu item in listOfMenu)
+            foreach (MenuClass item in listOfMenu)
             {
                 Console.WriteLine($"{item.ID}: {item.Name} -- {item.Price}");
             }
@@ -99,7 +99,7 @@ namespace Cafe
             Console.WriteLine("Enter the ID of item you would like to see.");
             int id = Int16.Parse(Console.ReadLine());
 
-            Menu item = _menuRepo.GetItemByID(id);
+            MenuClass item = _menuRepo.GetItemByID(id);
 
             if (item != null)
             {
@@ -122,7 +122,7 @@ namespace Cafe
             int oldId = Int16.Parse(Console.ReadLine());
 
             Console.Clear();
-            Menu newItem = new Menu();
+            MenuClass newItem = new MenuClass();
 
             newItem.ID = oldId;
 
@@ -170,9 +170,9 @@ namespace Cafe
         }
         private void SeedMenuList()
         {
-            Menu cheeseburger = new Menu(1, "Big Cheesy", "Two 80/20 100% USDA Beef between two perfectly toasted buns.\n", "Hamburger, Cheese, Lettuce, Tomato, Mayo, Onion.", 4.99m);
-            Menu hotDog = new Menu(2, "Hot Dog", "Hot dog between a toasted bun.\n", "Hot Dog, Mustard, Ketchup, Bun.", 1.50m);
-            Menu steak = new Menu(3, "Ribeye", "100% USDA Ribeye Steak.\n", "Steak, fried onions, herb butter", 14.99m);
+            MenuClass cheeseburger = new MenuClass(1, "Big Cheesy", "Two 80/20 100% USDA Beef between two perfectly toasted buns.\n", "Hamburger, Cheese, Lettuce, Tomato, Mayo, Onion.", 4.99m);
+            MenuClass hotDog = new MenuClass(2, "Hot Dog", "Hot dog between a toasted bun.\n", "Hot Dog, Mustard, Ketchup, Bun.", 1.50m);
+            MenuClass steak = new MenuClass(3, "Ribeye", "100% USDA Ribeye Steak.\n", "Steak, fried onions, herb butter", 14.99m);
 
             _menuRepo.AddToMenu(cheeseburger);
             _menuRepo.AddToMenu(hotDog);

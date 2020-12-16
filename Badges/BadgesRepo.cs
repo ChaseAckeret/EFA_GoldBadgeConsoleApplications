@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 namespace Badges
 {
-    class BadgesRepo
+    public class BadgesRepo
     {
         private Dictionary<int, List<string>> _accessList = new Dictionary<int, List<string>>();
 
@@ -40,6 +40,21 @@ namespace Badges
                             return true;
                         }
                     }
+                }
+            }
+            return false;
+        }
+
+        //Add
+        public bool AddDoor(int id, string door)
+        {
+            foreach(KeyValuePair<int, List<string>> badge in _accessList)
+            {
+                if(badge.Key == id)
+                {
+                    List<string> doors = badge.Value;
+                    doors.Add(door);
+                    return true;
                 }
             }
             return false;
