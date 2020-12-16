@@ -12,11 +12,13 @@ namespace Badges
 
         public void Run()
         {
+            SeedList();
             Menu();
         }
 
         private void Menu()
         {
+            Console.Clear();
             bool keepRunning = true;
             while (keepRunning)
             {
@@ -36,6 +38,7 @@ namespace Badges
                         EditBadgeMenu();
                         break;
                     case "3":
+                        Console.Clear();
                         ViewBadges();
                         break;
                     case "4":
@@ -46,10 +49,10 @@ namespace Badges
                         Console.WriteLine("Please enter a valid number.");
                         break;
                 }
+                //Console.WriteLine("Please hit a key to continue.");
+                Console.ReadKey();
+                Console.Clear();
             }
-            Console.WriteLine("Please hit a key to continue.");
-            Console.ReadKey();
-            Console.Clear();
         }
 
         private void AddBadge()
@@ -75,6 +78,7 @@ namespace Badges
                 {
                     keepAddingDoors = false;
                     Console.Clear();
+                    Menu();
                 }
             }
             _badgesRepo.AddToAccessList(badge);
@@ -82,6 +86,7 @@ namespace Badges
 
         private void EditBadgeMenu()
         {
+            Console.Clear();
             Console.WriteLine("What would you like to do?\n\n" +
                 "1: Remove a door\n" +
                 "2: Add a door\n" +
@@ -111,29 +116,34 @@ namespace Badges
         private void RemoveDoor()
         {
             Console.Clear();
+            ViewBadges();
             Console.WriteLine("What is the badge ID that needs updated?");
             int id = Int16.Parse(Console.ReadLine());
 
             var badge = _badgesRepo.GetBadgeById(id);
 
             string masterList = "";
-            foreach (var door in badge.Doors) 
+            foreach (var door in badge.Doors)
             {
-                masterList += door + ",";   //Fix comma?
+                masterList += $"{door,-5}";   //Fix comma?
             }
 
             Console.WriteLine("Badge {0} has access to doors {1}\n\n", id, masterList);
-            Console.WriteLine("Which door would you like to remove?");
+            Console.WriteLine("Which door would you like to remove?\n\n");
             string oldDoor = Console.ReadLine();
 
-            bool wasDeleted = _badgesRepo.DeleteAccessList(id, oldDoor);
+            bool wasDeleted = _badgesRepo.DeleteDoor(id, oldDoor);
             if (wasDeleted)
             {
                 Console.WriteLine("Door was removed");
+                Console.ReadKey();
+                Menu();
             }
             else
             {
                 Console.WriteLine("Door was not removed");
+                Console.ReadKey();
+                Menu();
             }
         }
 
@@ -144,21 +154,52 @@ namespace Badges
 
         private void ViewBadges()
         {
-            Console.Clear();
             Dictionary<int, List<string>> badgeDictionary = _badgesRepo.GetAccessList();
 
-            Console.WriteLine($"{"Badge ID",-10} {"Door Access",-10}");
+            Console.WriteLine($"{"Badge ID",-10} {"Door Access",-10}\n");
             foreach (KeyValuePair<int, List<string>> badge in badgeDictionary)
             {
                 string masterList = "";
                 foreach (var door in badge.Value)
                 {
-                    masterList += door + ",";   //Fix comma?
+                    masterList += $"{ door,-5}";   //Fix comma?
                 }
-                Console.WriteLine("{0} {1}", badge.Key, masterList);
-                Console.ReadKey();
-                Console.Clear();
+                Console.WriteLine($"{badge.Key,-10} {masterList}\n");
             }
+        }
+
+        private void SeedList()
+        {
+            List<string> doors1 = new List<string>();
+            List<string> doors2 = new List<string>();
+            List<string> doors3 = new List<string>();
+            List<string> doors4 = new List<string>();
+
+            doors1.Add("A1");
+            doors1.Add("A2");
+            doors1.Add("A3");
+
+            doors2.Add("A4");
+            doors2.Add("A5");
+            doors2.Add("A6");
+
+            doors3.Add("A1");
+            doors3.Add("A3");
+            doors3.Add("A5");
+
+            doors4.Add("A2");
+            doors4.Add("A4");
+            doors4.Add("A6");
+
+            Badge badge1 = new Badge(1001, doors1);
+            Badge badge2 = new Badge(2001, doors2);
+            Badge badge3 = new Badge(3001, doors3);
+            Badge badge4 = new Badge(4001, doors4);
+
+            _badgesRepo.AddToAccessList(badge1);
+            _badgesRepo.AddToAccessList(badge2);
+            _badgesRepo.AddToAccessList(badge3);
+            _badgesRepo.AddToAccessList(badge4);
         }
     }
 }

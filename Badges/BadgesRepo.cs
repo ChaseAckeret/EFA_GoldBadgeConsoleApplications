@@ -46,9 +46,9 @@ namespace Badges
         }
 
         //Delete
-        public bool DeleteAccessList(int id, string oldDoor)
+        public bool DeleteDoor(int id, string oldDoor)
         {
-            foreach(KeyValuePair<int, List<string>> badge in _accessList)
+            foreach (KeyValuePair<int, List<string>> badge in _accessList)
             {
                 if (badge.Key == id)
                 {
@@ -73,7 +73,7 @@ namespace Badges
             Badge returnBadge = new Badge();
             foreach (KeyValuePair<int, List<string>> badge in _accessList)
             {
-                if(badge.Key == id)
+                if (badge.Key == id)
                 {
                     returnBadge.BadgeID = id;
                     returnBadge.Doors = badge.Value;
