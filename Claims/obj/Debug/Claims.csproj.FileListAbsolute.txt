@@ -12,3 +12,10 @@ C:\Users\dmill\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplic
 C:\Users\dmill\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\obj\Debug\Claims.csproj.CoreCompileInputs.cache
 C:\Users\dmill\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\obj\Debug\Claims.exe
 C:\Users\dmill\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\obj\Debug\Claims.pdb
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\bin\Debug\Claims.exe.config
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\bin\Debug\Claims.exe
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\bin\Debug\Claims.pdb
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\obj\Debug\Claims.csprojAssemblyReference.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\obj\Debug\Claims.csproj.CoreCompileInputs.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\obj\Debug\Claims.exe
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Claims\obj\Debug\Claims.pdb

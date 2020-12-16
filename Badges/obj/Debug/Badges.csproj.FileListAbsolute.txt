@@ -1,0 +1,7 @@
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Badges\obj\Debug\Badges.csprojAssemblyReference.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Badges\obj\Debug\Badges.csproj.CoreCompileInputs.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Badges\bin\Debug\Badges.exe.config
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Badges\bin\Debug\Badges.exe
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Badges\bin\Debug\Badges.pdb
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Badges\obj\Debug\Badges.exe
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\Badges\obj\Debug\Badges.pdb
