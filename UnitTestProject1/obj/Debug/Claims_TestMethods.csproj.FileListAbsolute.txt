@@ -1,0 +1,2 @@
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\UnitTestProject1\obj\Debug\Claims_TestMethods.csprojAssemblyReference.cache
+C:\Users\chase\OneDrive\Desktop\ElevenFiftyProjects\DotNetProjects\GoldBadgeConsoleApplications\UnitTestProject1\obj\Debug\Claims_TestMethods.csproj.CoreCompileInputs.cache

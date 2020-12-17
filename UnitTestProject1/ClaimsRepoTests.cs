@@ -21,10 +21,14 @@ namespace Claims_TestMethods
         
 
         [TestMethod]
-        public void AddToQueue_ShouldNotGetNull()
+        public void AddClaim_ShouldNotGetNull()
         {
             //Arrange
-            //Act
+            //Test Initialize
+            //Act -- This is done in Arrange Method
+            //Assert
+
+            
             
         }
     }

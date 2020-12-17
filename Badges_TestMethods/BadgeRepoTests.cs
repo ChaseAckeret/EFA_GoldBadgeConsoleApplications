@@ -28,8 +28,62 @@ namespace Badges_TestMethods
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void AddToAccessList_ShouldGetNotNull()
         {
+            //Arrange
+            //Test Initialize
+            //Act
+            Badge badgeFromDictionary = _repo.GetBadgeById(5001);
+
+            //Assert
+            Assert.IsNotNull(badgeFromDictionary);
         }
+
+        [TestMethod]
+        public void GetAccessList_ShouldGetNotNull()
+        {
+            //Arrange
+            //Test Initialize
+            //Act
+            Dictionary<int, List<string>> badgeDictionary = _repo.GetAccessList();
+
+            //Assert
+            Assert.IsNotNull(badgeDictionary);
+        }
+
+        [TestMethod]
+        public void AddDoor_ShouldGetAreEqual()
+        {
+
+            //Arrange
+            //Test Initialize
+
+            //Act
+            int id = _content.BadgeID;
+            string door = ("A4");
+
+            _repo.AddDoor(id, door);
+
+            //Assert
+            Assert.AreEqual(4, _content.Doors.Count);
+        }
+
+        [TestMethod]
+        public void DeleteDoor_ShouldGetAreEqual()
+        {
+            //Arrange
+            //Test Initialize
+
+            //Act
+            int id = _content.BadgeID;
+            string door = "A3";
+
+            _repo.DeleteDoor(id, door);
+
+            //Assert
+            Assert.AreEqual(2, _content.Doors.Count);
+        }
+
+        //Did not use UpdateAccessList Method in my application. Therefore, I did not test it.
     }
 }
