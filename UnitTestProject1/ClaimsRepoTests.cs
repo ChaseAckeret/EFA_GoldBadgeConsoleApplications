@@ -27,7 +27,9 @@ namespace Claims_TestMethods
             //Test Initialize
             //Act -- This is done in Arrange Method
             //Assert
-
+            Assert.IsNotNull(_repo.ViewClaimList()) ;
+            bool containsContent = _repo.ViewClaimList().Contains(_content);
+            Assert.IsTrue(containsContent);
             
             
         }
