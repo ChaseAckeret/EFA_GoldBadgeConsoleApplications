@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Cafe;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -20,7 +21,7 @@ namespace Cafe_TestMethods
         }
 
         [TestMethod]
-        public void AddToList_ShouldGetNotNull()
+        public void AddToMenu_ShouldGetNotNull()
         {
             //Arrange
             MenuClass menu = new MenuClass();
@@ -36,7 +37,20 @@ namespace Cafe_TestMethods
         }
 
         [TestMethod]
-        public void UpdateMenu_ShouldReturnTrue()
+        public void GetMenuList_ShouldGetNotNull()
+        {
+            //Arrange
+            //Test Initialize
+            //Act
+            List<MenuClass> menuList = _repo.GetMenuList();
+
+            //Assert
+            Assert.IsNotNull(menuList);
+
+        }
+
+        [TestMethod]
+        public void UpdateMenuItem_ShouldReturnTrue()
         {
             //Arrange
             //Test Initialize
@@ -51,7 +65,7 @@ namespace Cafe_TestMethods
         }
 
         [TestMethod]
-        public void DeleteContent_ShouldReturnTrue()
+        public void RemoveMenuItem_ShouldReturnTrue()
         {
             //Arrange
             //Act
